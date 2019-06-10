@@ -47,14 +47,14 @@ public class ReverseNodes {
         return node;
     }
 
-    public void display(ListNode head) {
+    public static void display(ListNode head) {
         while (head != null) {
             System.out.println(head.val);
             head = head.next;
         }
     }
 
-    public void addNode(ListNode head, int val) {
+    public static void addNode(ListNode head, int val) {
         if (head == null) {
             return;
         }
@@ -67,11 +67,11 @@ public class ReverseNodes {
     public static void main(String[] args) {
         ListNode root = new ListNode(1);
         ReverseNodes nodes = new ReverseNodes();
-        nodes.addNode(root, 2);
-        nodes.addNode(root, 3);
-        nodes.addNode(root, 4);
-        nodes.addNode(root, 5);
-        nodes.addNode(root, 6);
+        addNode(root, 2);
+        addNode(root, 3);
+        addNode(root, 4);
+        addNode(root, 5);
+        addNode(root, 6);
         nodes.display(nodes.reverseKGroup(root, 2));
         //nodes.display(nodes.reverseGroup(root, null));
     }
